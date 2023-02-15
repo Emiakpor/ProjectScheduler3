@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CriticalPathApp.Views.WelcomePageView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hello Gabriel Achebe"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Department of Engineering Management"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="ProjSM2"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Developed by Gabriel Uchechukwu Achebe, MEM Project "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Supervised by Prof. A.O Kuye"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="University of Port Harcourt C 2022"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Welcome to Project Scheduling and Monitoring App"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button VerticalOptions="Center" Text="Start Scheduling" Command="{Binding StartSchedulingCommand}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

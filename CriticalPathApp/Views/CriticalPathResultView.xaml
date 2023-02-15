@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CriticalPathApp.Views.CriticalPathResultView"
+             xmlns:vm="clr-namespace:CriticalPathApp.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:CriticalPathResultViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Critical Path: " Margin="0,0,0,10" FontAttributes="Bold" />
+            <Label Grid.Column="1" Text="{Binding CriticalPath}"/>
+            <Label Grid.Row="1" Text="Total Duration:" Margin="0,0,0,10" FontAttributes="Bold"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding TotalDuration}"/>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Exit" x:Name="btnExit" Clicked="btnExit_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

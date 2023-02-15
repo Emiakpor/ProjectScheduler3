@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CriticalPathApp.Views.HomePageView"
+             xmlns:vm="clr-namespace:CriticalPathApp.ViewModels"
+             >
+    <ContentPage.BindingContext>
+        <vm:HomePageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="ProjSM App"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+            <Label Grid.Row="2" Text="Project Scheduling and Minitoring"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="18"/>
+            <Label Grid.Row="3" Text="with PERTCPM"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="18"/>
+            <Button Grid.Row="5" Text="Continue" x:Name="btnContinue" Clicked="btnContinue_Clicked"/>
+            <Button Grid.Row="6" Text="Exit" x:Name="btnExit" Clicked="btnExit_Clicked"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

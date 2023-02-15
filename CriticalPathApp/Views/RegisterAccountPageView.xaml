@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CriticalPathApp.Views.RegisterAccountPageView"
+              xmlns:vm="clr-namespace:CriticalPathApp.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:RegisterAccountPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Padding="10">
+                <Label Text="Register Account"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource Primary}" />
+                <Entry Text="{Binding Username, Mode=TwoWay}" Placeholder="Username"/>
+                <Entry Text="{Binding Password, Mode=TwoWay}" Placeholder="Password" IsPassword="True"/>
+                <Entry Text="{Binding Email, Mode=TwoWay}" Placeholder="Email" />
+                <Button Text="Register" x:Name="btnRegister" Clicked="btnRegister_Clicked" IsEnabled="{Binding IsRegisterCommandEnabled}"/>
+                <Label Text="Already have an Account"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Text="Sign In" Command="{Binding SignCommand}" x:Name="btnSignIn" Clicked="btnSignIn_Clicked"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
